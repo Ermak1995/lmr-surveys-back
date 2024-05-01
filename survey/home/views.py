@@ -9,14 +9,9 @@ from .forms import SearchSurvey
 from .utils import db
 from uuid import uuid4
 
-from .serializers import PersonSerializer, SurveySerializer
+from .serializers import SurveySerializer
 from rest_framework import viewsets
-from .models import Person, Surveys
-
-
-class PersonViewSet(viewsets.ModelViewSet):
-    queryset = Person.objects.all()
-    serializer_class = PersonSerializer
+from .models import Surveys
 
 
 class SurveysViewSet(viewsets.ModelViewSet):
@@ -43,6 +38,7 @@ def create_survey(request):
             serializer.save()
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)
+
 
 @api_view(['GET'])
 def get_survey_by_uuid(request):

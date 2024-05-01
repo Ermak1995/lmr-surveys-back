@@ -3,9 +3,7 @@ from . import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'person', views.PersonViewSet)
 router.register(r'surveys', views.SurveysViewSet)
-
 
 urlpatterns = [
     path('', include(router.urls)),
