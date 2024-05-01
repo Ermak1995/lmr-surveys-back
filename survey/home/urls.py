@@ -9,5 +9,6 @@ router.register(r'surveys', views.SurveysViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('create-survey/', views.create_survey),
+    path('create-survey/', views.create_survey, name='create_survey'),
+    path('survey', views.get_survey_by_uuid, name="get_survey"),
 ]
