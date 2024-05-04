@@ -40,15 +40,25 @@ def create_survey(request):
         return JsonResponse(serializer.errors, status=400)
 
 
-@api_view(['GET'])
+@api_view(['GET', 'DELETE'])
 def get_survey_by_uuid(request):
     uuid = request.GET["uuid"]
     obj = get_object_or_404(Surveys, uuid=uuid)
-    serializer = SurveySerializer(obj)
-    # print(serializer.data.get('survey'))
-    survey = serializer.data.get('survey')
-    # print(type(survey))
-    return Response(survey)
+    if request.method == 'GET':
+        serializer = SurveySerializer(obj)
+        # print(serializer.data.get('survey'))
+        survey = serializer.data.get('survey')
+        # print(type(survey))
+        return Response(survey)
+    elif request.method == 'DELETE':
+        try:
+            obj.delete()
+        except:
+            return Response('ERROR')
+        return Response('The survey was successfully deleted')
+
+
+
 
 # def index(request):
 #     form = SearchSurvey()
