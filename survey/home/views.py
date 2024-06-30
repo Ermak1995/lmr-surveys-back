@@ -32,7 +32,7 @@ def create_survey(request):
         data = JSONParser().parse(request)
         data["uuid"] = uuid
         data["access_hash"] = access_hash
-        print(data)
+        # print(data)
         serializer = SurveySerializer(data=data)
         if serializer.is_valid():
             serializer.save()
@@ -58,7 +58,20 @@ def get_survey_by_uuid(request):
         return Response('The survey was successfully deleted')
 
 
+@api_view(['GET', 'POST'])
+def check_survey(request):
+    uuid = request.GET["uuid"]
+    survey = Surveys.objects.get(uuid=uuid).survey
+    max_counter = counter = 0
+    data = JSONParser().parse(request)
+    for question in survey['questions']:
+        max_counter += 1
+        print(question)
+        if question['correct_answer'] == data[question['id']]:
+            counter += 1
+    print(f'Ваш результат {counter} из {max_counter}')
 
+    return JsonResponse({'counter': counter, 'max_counter': max_counter})
 
 # def index(request):
 #     form = SearchSurvey()

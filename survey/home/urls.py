@@ -9,4 +9,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path('create-survey/', views.create_survey, name='create_survey'),
     path('survey', views.get_survey_by_uuid, name="get_survey"),
+    path('check-survey', views.check_survey, name="check_survey"),
 ]

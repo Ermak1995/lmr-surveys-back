@@ -6,3 +6,4 @@ class Surveys(models.Model):
     uuid = models.UUIDField(unique=True, default=None)
     access_hash = models.UUIDField(unique=True, default=None)
     survey = models.JSONField()
+    # number_questions = models.IntegerField()
