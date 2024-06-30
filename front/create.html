@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/create.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Создать </title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="assets/icon.png" alt="">
+                <p>lmr-survey</p>
+            </div>
+        </a>
+
+        <div class="header-buttons">
+            <div id="get-by-uuid">
+                <a class="button">Пройти опрос</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <a class="back-to-homepage" href="index.html">
+            <box-icon class="icon_right" name='right-arrow-alt' flip='horizontal'></box-icon>
+            Вернуться на главную
+        </a>
+
+        <div class="new-survey">
+            <span class="survey_item survey_item_bold">Создание опроса</span>
+
+            <form action="" method="post" id="new-survey-form">  
+                <span class="survey_field">
+                    <label for="title" class="survey_item">Название</label>
+                    <input id="title" name="title">
+                </span>
+
+                <span class="survey_field">
+                    <label for="topic" class="survey_item">Категория</label>
+                    <input id="topic" name="topic">
+                </span>
+
+                <span class="survey_field">
+                    <label for="show_result" class="survey_item survey_field_checkbox">
+                        <input id="show_result" type="checkbox" name="show_result">
+                        Показывать результат после прохождения? 
+                    </label>
+                </span>
+                <ol id="list-questions">
+                    <li class="question" id="question-1">
+                        <div class="survey_field">
+                            <span class="question-number"></span>
+                            <input id="first-question-input" type="text" class='input_name_question'>
+                        </div>
+                        <div class="survey_field">
+                            <span>Варианты ответы</span>
+                            <ol id="list-answers-1">
+                                <li class="li-answer">
+                                    <div class="answer-block">
+                                        <input type="radio" name="question-1" id="">
+                                           
+                                    <input type="text">
+                                </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <button class="button add-question-button" id="add-answer-1" type="button" onclick="create_answer_field(this)">
+                            Добавить вариант
+                        </button>
+                    </li>
+                </ol>
+                
+                <button class="button" type="button" onclick="create_question()">Добавить вопрос</button>
+                <div class="form-buttons"> 
+                    <button class="button" type="reset">Сбросить</button>
+                    <button class="button" type="submit">Сохранить</button>
+                </div>
+            </form>
+        </div>  
+    </main>
+
+    <footer>
+        <p>created by linuxmasterrace team | 2024</p>
+    </footer>
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/create_survey.js"></script>
+    <script src="scripts/get_by_uuid.js"></script>
+</body>
+</html>

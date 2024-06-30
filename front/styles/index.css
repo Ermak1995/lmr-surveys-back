@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "variables.css";
+
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 50px 0;
+}
+
+
+.block_count{
+    font-size: 200%;
+}
+
+
+select {
+    padding: 10px 25px;
+    font-size: 1em;
+}
+
+
+.surveys {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    gap: 0 2.6%;    
+}
+
+
+.surv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 25px;
+    width: 23%;
+    height: 400px;
+    text-align: left;
+    background: var(--background-dark);
+    border-radius: 18px;
+    color: var(--main-text);
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+
+.surv-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.surv-info-item{
+    color: var(--main-text);
+    margin-bottom: 25px;
+}
+
+
+.surv-info-topic{
+    color: var(--second-text);
+}
+
+
+.surv-button {
+    margin: 0;
+    font-size: 100%;
+}
+

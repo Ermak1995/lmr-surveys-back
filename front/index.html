@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>lmr-survey</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="assets/icon.png" alt="">
+                <p>lmr-survey</p>
+            </div>
+        </a>
+        <div class="header-buttons">
+            <a href="create.html">
+                <button class="button white">Создать опрос</button>
+            </a>
+            <div id="get-by-uuid">
+                <button class="button">Пройти опрос</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="search">
+            <div class="block_count">
+                <p id="bc"></p>                          
+            </div>
+            
+            <select id="sort-by">
+                <option value="name">Сначала популярные</option>
+                <option value="price">Самые короткие</option>
+                <option value="date">Сначала новые</option>
+            </select>
+        </div>
+
+        <div class="surveys"></div>
+
+        <button onclick="topFunction()" id="button-up">↑</button> 
+    </main>
+
+    <footer>
+        <p>created by linuxmasterrace team | 2024</p>
+    </footer>
+    <script src="scripts/get_by_uuid.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

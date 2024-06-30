@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "variables.css";
+
+*{
+    font-family: "Noto Sans";
+}
+
+
+main {
+    flex-direction: row;
+    justify-content: left;
+    padding: 100px 10%;
+}
+
+
+.back-to-homepage {
+    width: 250px;
+    margin-left: 24px;
+    font-size: 1.2em;   
+}
+
+
+.back-to-homepage:hover{
+    text-decoration: underline;
+}
+
+
+.new-survey {
+    font-family: "Noto Sans";
+    border: 2px solid var(--background-dark); 
+    border-radius: 10px; 
+    padding: 20px;
+    background-color: var(--background);
+    max-width: 600px;
+    margin-left: calc(40% - 250px);
+}
+
+
+.survey_item {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 5px;
+}
+
+
+.survey_item_bold{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+
+.survey_field {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-bottom: 15px;
+}
+
+
+.survey_field_checkbox {
+    flex-direction: row;
+}
+
+
+.question {
+    margin-bottom: 20px;
+}
+
+
+.question-number{
+    margin-bottom: 9px;
+    margin-top: 11px;
+}
+
+
+.input_name_question{
+    margin-top: 10px;
+}
+
+
+.li_answer{
+    margin-bottom: 2.4px;
+    margin-top: 2.4px;
+}
+
+
+.icon_right{
+    z-index: 0;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -2pform span x;
+}
+
+
+.form-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.new-survey .button {
+    font-size: 80%;
+    padding: 5px 20px;
+    margin: 0;
+}
+
+.new-survey .add-question-button {
+    background-color: rgb(198, 198, 198);
+    border: 1px solid rgb(198, 198, 198);
+}
+
+
+.new-survey .button:hover {
+  transform: translateY(0);
+}
+
+

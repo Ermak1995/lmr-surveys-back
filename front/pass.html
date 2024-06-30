@@ -1,0 +1,65 @@
+<!-- Страница для прохождения опроса -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/pass.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="assets/icon.png" alt="">
+                <p>lmr-survey</p>
+            </div>
+        </a>
+        <div class="header-buttons">
+            <a href="create.html">
+                <button class="button white">Создать опрос</button>
+            </a>
+            <div id="get-by-uuid">
+                <button class="button">Пройти опрос</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <box-icon class="icon_right" name='right-arrow-alt' flip='horizontal'></box-icon>
+        <div>
+            <a class="back-to-homepage" href="index.html">Вернуться на главную</a>
+        </div>
+
+
+        <div class="new-survey">
+            <div class="head-survey">
+                <p>Прохождение опроса</p>
+            </div>
+            <div class="name-survey">
+
+            </div>
+            <div class="list-task">
+
+            </div>
+            <button class="button save" type="submit" onclick="check_survey()">Сохранить</button>
+            <button class="button delete" type="submit" onclick="delete_survey()">Удалить</button>
+        </div>
+        
+    </main>
+
+
+    <footer>
+        <p>created by linuxmasterrace team | 2024</p>
+    </footer>
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/pass.js"></script>
+    <script src="scripts/get_by_uuid.js"></script>
+    <script src="scripts/check_survey.js"></script>
+</body>
+</html>

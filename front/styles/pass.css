@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "variables.css";
+
+*{
+    font-family: "Noto Sans";
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+
+.head-survey{
+    text-align: center;
+
+}
+
+.back-to-homepage {
+
+    font-size: 1.2em;
+
+}
+
+
+.new-survey {
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    padding: 20px; 
+    background-color: #f9f9f9;
+    width: 400px; 
+    margin: 0 auto;
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    /* margin-top: 160px; */
+    padding: 10%;
+    width: 100%;
+    background-color: var(--background);
+}
+
+
+.icon_right{
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -2px;
+}
+
+.back-to-homepage:hover{
+    text-decoration: underline;
+}
+
+.survey_name_p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.list-task{
+    justify-content: space-between;
+    gap: 10%;
+
+}
+
+.text_answ_p{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.text_question_p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+
+  }
+
+  .button_text {
+    display: flex;
+  }
+
+#kek{
+    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.number_question_p{
+    margin-top: -3px;
+    margin-bottom: 14px;
+}
+
+.text_question_p{
+    margin-bottom: 11px;
+}
+
+.button.save{
+    margin-left: -0.01px;
+    padding: 0;
+    height: 30px;
+    width: 130px;
+}
