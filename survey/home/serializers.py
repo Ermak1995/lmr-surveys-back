@@ -1,5 +1,6 @@
 from .models import Surveys
 from rest_framework import serializers
+from .mongodb_utils import survey_collection
 
 
 class SurveySerializer(serializers.ModelSerializer):
